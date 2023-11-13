@@ -8,10 +8,15 @@ import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+<<<<<<< HEAD
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 
 
+=======
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
+>>>>>>> b8eebe3 (Pruebas unitarias con Mockito y nueva rama sof_Pruebas)
 public class ReservationSystemTest {
 
     private ReservationSystem system;
@@ -50,6 +55,7 @@ public class ReservationSystemTest {
 
 
     }
+<<<<<<< HEAD
 
     @Test
     void testGetAvailableRooms() {
@@ -71,3 +77,6 @@ public class ReservationSystemTest {
     }
 
 }
+=======
+}
+>>>>>>> b8eebe3 (Pruebas unitarias con Mockito y nueva rama sof_Pruebas)

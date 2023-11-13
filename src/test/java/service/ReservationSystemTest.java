@@ -9,10 +9,15 @@ import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 
 
+=======
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
+>>>>>>> b8eebe3 (Pruebas unitarias con Mockito y nueva rama sof_Pruebas)
 =======
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -43,6 +48,7 @@ public class ReservationSystemTest {
     public void testCancelReservationWhenIsFalse() {
         when(conferenceRoomMock.getRoomById("romm3")).thenReturn(null);
         assertEquals(false, system.cancelReservation("room3"));
+<<<<<<< HEAD
     }
 
 
@@ -76,6 +82,20 @@ public class ReservationSystemTest {
         assertEquals(room4, availableRooms.get(1));
     }
 
+=======
+    }
+
+
+    @Test
+    public void testCancelReservationWhenIsTrue() {
+        ConferenceRoom prueba3 = new ConferenceRoom("room4", 5);
+        prueba3.setReserved(true);
+        when(conferenceRoomMock.getRoomById("room4")).thenReturn(prueba3);
+        assertEquals(true, system.cancelReservation("room4"));
+
+
+    }
+>>>>>>> b8eebe3 (Pruebas unitarias con Mockito y nueva rama sof_Pruebas)
 }
 =======
 }

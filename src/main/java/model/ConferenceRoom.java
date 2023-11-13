@@ -27,4 +27,7 @@ public class ConferenceRoom {
         isReserved = reserved;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
 }

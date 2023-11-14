@@ -9,7 +9,9 @@ import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
+
+
 public class ReservationSystemTest {
 
     private ReservationSystem system;
@@ -48,4 +50,24 @@ public class ReservationSystemTest {
 
 
     }
+
+    @Test
+    void testGetAvailableRooms() {
+        ConferenceRoom room1 = new ConferenceRoom("1", 10);
+        ConferenceRoom room2 = new ConferenceRoom("2", 20);
+        ConferenceRoom room3 = new ConferenceRoom("3", 20);
+        ConferenceRoom room4 = new ConferenceRoom("4", 20);
+        room2.setReserved(true);
+        room3.setReserved(true);
+        when(conferenceRoomMock.getAllRooms()).thenReturn(List.of(room1, room2, room3, room4));
+
+        // Act
+        List<ConferenceRoom> availableRooms = system.getAvailableRooms();
+
+        // Assert
+        assertEquals(2, availableRooms.size());
+        assertEquals(room1, availableRooms.get(0));
+        assertEquals(room4, availableRooms.get(1));
+    }
+
 }

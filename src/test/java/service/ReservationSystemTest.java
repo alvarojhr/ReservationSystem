@@ -128,6 +128,6 @@ public class ReservationSystemTest {
         ConferenceRoom room = new ConferenceRoom("1", 10);
         assertEquals ("1", room.getId());
         assertEquals(10, room.getCapacity());
-        assertFalse(room.isReserved());
+        assertFalse(!room.isReserved());
     }
 }

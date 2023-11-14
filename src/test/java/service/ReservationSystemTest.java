@@ -1,5 +1,5 @@
 package service;
-<<<<<<< HEAD
+
 
 import dao.ConferenceRoomDao;
 import org.junit.jupiter.api.Test;
@@ -8,25 +8,24 @@ import static org.mockito.Mockito.*;
 import model.ConferenceRoom;
 import static org.mockito.Mockito.never;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-=======
-<<<<<<< HEAD
+
 import dao.ConferenceRoomDao;
 import model.ConferenceRoom;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
->>>>>>> c78f842b421bc78ada870f6575ec5adffe4b68e7
+
 
 class ReservationSystemTest {
 
     @Test
-<<<<<<< HEAD
+
 
     public void testReserveRoom() {
 
-=======
+
     void testReserveRoom() {
->>>>>>> c78f842b421bc78ada870f6575ec5adffe4b68e7
+
         // Crear mock de ConferenceRoomDao
         ConferenceRoomDao roomDaoMock = mock(ConferenceRoomDao.class);
 
@@ -54,7 +53,7 @@ class ReservationSystemTest {
     }
 
     @Test
-<<<<<<< HEAD
+
 
    public void testCancelReservation() {
 // Crear mock de ConferenceRoomDao
@@ -84,7 +83,7 @@ assertFalse(result);
         
     }
 }
-=======
+
     void testCancelReservation() {
         // Crear mock de ConferenceRoomDao
         ConferenceRoomDao roomDaoMock = mock(ConferenceRoomDao.class);
@@ -113,34 +112,4 @@ assertFalse(result);
         
     }
 }
-=======
 
-import model.ConferenceRoom;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-public class ReservationSystemTest {
-
-    private ReservationSystem system;
-
-    @BeforeEach
-    public void setUp() {
-        //system = new ReservationSystem();
-    }
-
-    @Test
-    public void testReserveRoom() {
-        // Implementar pruebas aquí
-    }
-
-    @Test
-    public void testCancelReservation() {
-        // Implementar pruebas aquí
-    }
-
-    // Puedes añadir más pruebas según lo consideres necesario
-}
->>>>>>> 6c0e657951df74405248f1b06c5f7deafc958ab9
->>>>>>> c78f842b421bc78ada870f6575ec5adffe4b68e7

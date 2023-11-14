@@ -36,17 +36,41 @@ public class ReservationSystemTest {
     @Test
     public void testCancelReservationIsTrue() {
         // Implementar pruebas aquí
+
     ConferenceRoom prueba2 = new ConferenceRoom("Manzana", 100);
        when(conferenceRoomMock.getRoomById("Manzana")).thenReturn(prueba2);
         assertEquals(true, system.reserveRoom("Manzana"));
+
+   
+
 
     }
      @Test
      public void testCancelReservationIsFalse() {
         // Implementar pruebas aquí
+
        when(conferenceRoomMock.getRoomById("Manzana")).thenReturn(null);
         assertEquals(false, system.reserveRoom("Manzana"));
 
     }
+
+        
+//        @Test
+//    public void testCancelReservationWhenIsFalse() {
+//        when(conferenceRoomMock.getRoomById("romm3")).thenReturn(null);
+//        assertEquals(false, system.cancelReservation("room3"));
+//    }
+//
+//
+//    @Test
+//    public void testCancelReservationWhenIsTrue() {
+//        ConferenceRoom prueba3 = new ConferenceRoom("room4", 5);
+//        prueba3.setReserved(true);
+//        when(conferenceRoomMock.getRoomById("room4")).thenReturn(prueba3);
+//        assertEquals(true, system.cancelReservation("room4"));
+    //}
+     }
+
     // Puedes añadir más pruebas según lo consideres necesario
-}
+     //holaaa
+

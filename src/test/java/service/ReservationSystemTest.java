@@ -17,12 +17,17 @@ public class ReservationSystemTest {
 
     @Test
     public void testReserveRoom() {
-        // Implementar pruebas aquí
+        assertEquals(true, system.reserveRoom("A1"));
+        assertEquals(false, system.reserveRoom("A1"));
+        assertEquals(false, system.reserveRoom("B1"));
     }
 
     @Test
     public void testCancelReservation() {
-        // Implementar pruebas aquí
+        assertEquals(false, system.cancelReservation("A1"));    
+        system.reserveRoom("A1");
+        assertEquals(true, system.cancelReservation("A1"));
+        assertEquals(false, system.cancelReservation("B1"));
     }
 
     // Puedes añadir más pruebas según lo consideres necesario

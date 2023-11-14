@@ -15,6 +15,7 @@ import java.util.List;
 public class ReservationSystemTest {
 
     private ReservationSystem system;
+    private ReservationSystem perro;
     private ConferenceRoomDao conferenceRoomMock;
     @BeforeEach
     public void setUp() {

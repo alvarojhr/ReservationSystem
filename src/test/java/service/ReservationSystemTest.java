@@ -1,29 +1,52 @@
 package service;
 
+import dao.ConferenceRoomDao;
 import model.ConferenceRoom;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.mockito.Mockito.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ReservationSystemTest {
 
     private ReservationSystem system;
+    private ConferenceRoomDao conferenceRoomMock;
 
     @BeforeEach
     public void setUp() {
-        //system = new ReservationSystem();
+        conferenceRoomMock = mock(ConferenceRoomDao.class);
+        system = new ReservationSystem(conferenceRoomMock);
     }
 
     @Test
-    public void testReserveRoom() {
-        // Implementar pruebas aquí
+    public void testReserveRoomIsTrue() {
+        ConferenceRoom prueba1 = new ConferenceRoom("Tropical", 50);
+        when(conferenceRoomMock.getRoomById("Tropical")).thenReturn(prueba1);
+        assertEquals(true, system.reserveRoom("Tropical"));
+    // Implementar pruebas aquí
     }
 
     @Test
-    public void testCancelReservation() {
-        // Implementar pruebas aquí
+    public void testReserveRoomIsFalse(){
+        when(conferenceRoomMock.getRoomById("Tropical")).thenReturn(null);
+        assertEquals(false,system.reserveRoom("Tropical"));
     }
+    
+    @Test
+    public void testCancelReservationIsTrue() {
+        // Implementar pruebas aquí
+    ConferenceRoom prueba2 = new ConferenceRoom("Manzana", 100);
+       when(conferenceRoomMock.getRoomById("Manzana")).thenReturn(prueba2);
+        assertEquals(true, system.reserveRoom("Manzana"));
 
+    }
+     @Test
+     public void testCancelReservationIsFalse() {
+        // Implementar pruebas aquí
+       when(conferenceRoomMock.getRoomById("Manzana")).thenReturn(null);
+        assertEquals(false, system.reserveRoom("Manzana"));
+
+    }
     // Puedes añadir más pruebas según lo consideres necesario
 }

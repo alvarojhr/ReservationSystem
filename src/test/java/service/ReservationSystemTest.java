@@ -1,4 +1,5 @@
 package service;
+<<<<<<< HEAD
 import dao.ConferenceRoomDao;
 import model.ConferenceRoom;
 import org.junit.jupiter.api.Test;
@@ -64,3 +65,33 @@ class ReservationSystemTest {
         
     }
 }
+=======
+
+import model.ConferenceRoom;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class ReservationSystemTest {
+
+    private ReservationSystem system;
+
+    @BeforeEach
+    public void setUp() {
+        //system = new ReservationSystem();
+    }
+
+    @Test
+    public void testReserveRoom() {
+        // Implementar pruebas aquí
+    }
+
+    @Test
+    public void testCancelReservation() {
+        // Implementar pruebas aquí
+    }
+
+    // Puedes añadir más pruebas según lo consideres necesario
+}
+>>>>>>> 6c0e657951df74405248f1b06c5f7deafc958ab9

@@ -1,71 +1,50 @@
-# Conference Room Reservation System
+# Library Management System
 
-A comprehensive system that allows employees to reserve conference rooms for meetings within a company.
+## Overview
+The Library Management System is a Java-based application designed to manage book loans in a university library. It allows students to borrow and return books while providing library staff with efficient tools to manage book inventory.
 
-## Table of Contents
+## Features
+- Borrow and return books
+- Track available and borrowed books
+- Register new students to the system
 
-- [Description](#description)
-- [Setup and Installation](#setup-and-installation)
-- [Usage](#usage)
-- [Testing](#testing)
-- [Contribution Guidelines](#contribution-guidelines)
-- [License](#license)
+## Getting Started
 
-## Description
+### Prerequisites
+- Java JDK 17 or higher
+- Maven (for dependency management and running tests)
 
-This project simulates a real-world scenario of a Conference Room Reservation System where users can:
-- View available conference rooms.
-- Reserve a conference room.
-- Cancel a reservation.
-
-## Setup and Installation
-
-1. **Prerequisites**:
-   - Java JDK 8 or higher
-   - Maven
-   - Git
-
-2. **Clone the Repository**:
-   ```bash
-   git clone <repository-url>
+### Installing and Running
+1. Clone the repository:
    ```
-
-3. **Navigate to the Project Directory**:
-   ```bash
-   cd ConferenceRoomReservationSystem
+   git clone https://github.com/UniversityLibrary/LibraryManagementSystem.git
    ```
-
-4. **Build the Project**:
-   ```bash
-   mvn clean install
+2. Navigate to the project directory and compile the project:
+   ```
+   cd LibraryManagementSystem
+   mvn compile
+   ```
+3. To run tests, use:
+   ```
+   mvn test
    ```
 
 ## Usage
+The system is used through its main class `LibraryManagementSystem`. Here's a simple example of how to use it:
 
-1. To start the application (if there's a main method for manual testing):
-   ```bash
-   java -cp target/ConferenceRoomReservationSystem-1.0-SNAPSHOT.jar <MainClassPath>
-   ```
+```java
+public class Main {
+    public static void main(String[] args) {
+        LibraryDatabase db = new LibraryDatabaseImpl();
+        LoanManager loanManager = new LoanManager(db);
 
-2. Use the provided interfaces or methods to interact with the system.
-
-## Testing
-
-To run the unit tests, execute the following command:
-
-```bash
-mvn test
+        // Add books, register students, and manage loans...
+    }
+}
 ```
 
-## Contribution Guidelines
-
-1. Fork the repository.
-2. Clone your forked repository to your local machine.
-3. Create a new branch with a descriptive name for your feature or bugfix.
-4. Make your changes and commit them with meaningful commit messages.
-5. Push your changes to your forked repository on GitHub.
-6. Create a pull request to the main repository. Ensure you describe the changes you've made in the pull request description.
+## Contributing
+We welcome contributions to this project. If you find any bugs or have suggestions, please open an issue or submit a pull request.
 
 ## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
